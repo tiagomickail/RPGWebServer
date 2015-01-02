@@ -57,10 +57,34 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Servicos.asmx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DAO\AcessoDAO.cs" />
+    <Compile Include="DAO\BaseDAO.cs" />
+    <Compile Include="DAO\GrupoDAO.cs" />
+    <Compile Include="DAO\MensagemDAO.cs" />
+    <Compile Include="DAO\UsuarioDAO.cs" />
+    <Compile Include="Envios\Envio.cs" />
+    <Compile Include="Envios\EnvioAlterarPessoasNoGrupo.cs" />
+    <Compile Include="Envios\EnvioCriarGrupo.cs" />
+    <Compile Include="Envios\EnvioMensagem.cs" />
+    <Compile Include="Envios\EnvioVerificarNovaMensagem.cs" />
+    <Compile Include="Models\Acesso.cs" />
+    <Compile Include="Models\Grupo.cs" />
+    <Compile Include="Models\Mensagem.cs" />
+    <Compile Include="Models\Usuario.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Retornos\Retorno.cs" />
+    <Compile Include="Retornos\RetornoGrupo.cs" />
+    <Compile Include="Retornos\RetornoListarUsuarios.cs" />
+    <Compile Include="Retornos\RetornoLogin.cs" />
+    <Compile Include="Retornos\RetornoMensagem.cs" />
+    <Compile Include="Servicos.asmx.cs">
+      <DependentUpon>Servicos.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Include="Web.Debug.config">
@@ -70,6 +94,7 @@
       <DependentUpon>Web.config</DependentUpon>
     </None>
   </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
